@@ -1,0 +1,954 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[6]:
+
+
+def sum_number(a,b,c):
+    return sum((a,b,c))*0.05
+
+
+# In[7]:
+
+
+sum_number(10,0,2)
+
+
+# In[8]:
+
+
+def myfunc(*args):
+    return sum(args)*0.5
+
+
+# In[12]:
+
+
+myfunc(50,50,10,55)
+
+
+# In[13]:
+
+
+def myfunc(*args):
+    return print(args)
+
+
+# In[14]:
+
+
+myfunc(50,70,80,88)
+
+
+# In[15]:
+
+
+def myfunc(**kwargs):
+    print(kwargs)
+
+
+# In[30]:
+
+
+def myfunc(**kwargs):
+    print(kwargs)
+    if 'fruits' in kwargs:
+        print(" my fruits of choice is {}".format(kwargs['fruits']))
+    else:
+        print("not found ")
+
+
+# In[31]:
+
+
+myfunc(fruits='apple', vegg="letture")
+
+
+# In[42]:
+
+
+def myfunc(*args,**kwargs):
+    print(args)
+    print(kwargs)
+    print("i need {}{} in my whole day".format(args[1],kwargs=['fruits']))
+
+
+# In[43]:
+
+
+myfunc(10,20,30,fruits="apple")
+
+
+# In[66]:
+
+
+def myfunc(*args):
+    for i in args:
+        if i%2==0:
+            return list(i)
+        
+
+
+# In[67]:
+
+
+myfunc(5,6,7,8)
+
+
+# In[68]:
+
+
+def myfunc(*args):
+    return [n for n in args if n%2 == 0]
+
+
+# In[69]:
+
+
+myfunc(1,2,3,4,5,6,7,8,9,10)
+
+
+# In[71]:
+
+
+""""LESSER OF TWO EVENS: Write a function that returns the lesser of two given numbers if both numbers are even, but returns the greater if one or both numbers are odd
+lesser_of_two_evens(2,4) --> 2
+lesser_of_two_evens(2,5) --> 5"""""
+    
+
+
+# In[73]:
+
+
+def my_func(a,b):
+    if a%2==0 and b%2==0:
+        return min(a,b)
+    else :
+        return max(a,b)
+    
+
+
+# In[74]:
+
+
+my_func(2,4)
+
+
+# In[75]:
+
+
+my_func(2,5)
+
+
+# In[76]:
+
+
+'''ANIMAL CRACKERS: Write a function takes a two-word string and 
+returns True if both words begin with same letter
+animal_crackers('Levelheaded Llama') --> True
+animal_crackers('Crazy Kangaroo') --> False'''
+
+
+# In[107]:
+
+
+def my_func1(word):
+    
+    a =word.split()
+    if a[0][0]==a[1][0]:
+        return True 
+    else:
+        return False 
+
+
+# In[108]:
+
+
+my_func1('Levelheaded Llama')
+
+
+# In[110]:
+
+
+my_func1('Crazy Kangaroo')
+
+
+# In[111]:
+
+
+''''MAKES TWENTY: Given two integers, return True if 
+the sum of the integers is 20 or if one of the integers
+is 20. If not, return False
+makes_twenty(20,10) --> True
+makes_twenty(12,8) --> True
+makes_twenty(2,3) --> False'''
+
+
+# In[116]:
+
+
+def my_func2(a,b):
+    
+    if sum((a,b))==20:
+        return True
+    elif a==20:
+        return True
+    else:
+        return False
+
+
+# In[117]:
+
+
+my_func2(20,10)
+
+
+# In[118]:
+
+
+my_func2(12,8)
+
+
+# In[119]:
+
+
+my_func2(2,3)
+
+
+# In[121]:
+
+
+
+'''OLD MACDONALD: Write a function that capitalizes the 
+first and fourth letters of a name
+old_macdonald('macdonald') --> MacDonald
+
+Note: 'macdonald'.capitalize() returns 'Macdonald' '''
+
+
+# In[184]:
+
+
+def my_func2(word):
+    first_letter=word[0].upper()
+    secound_letter=word[1:3]
+    four_letter=word[3].upper()
+    last_letter=word[4::]
+    
+    return first_letter+secound_letter+four_letter+last_letter
+    
+
+
+# In[185]:
+
+
+my_func2('macdonald')
+
+
+# In[180]:
+
+
+def old_macdonald(name):
+    if len(name) > 3:
+        return name[:3].capitalize() + name[3:].capitalize()
+    else:
+        return 'Name is too short!'
+
+
+# In[176]:
+
+
+s[3].upper()
+
+
+# m
+
+# In[219]:
+
+
+def my_func3(word):
+    new_one=word.split( )
+    reverse=new_one[::-1]
+    new_word=' '.join(reverse)
+    return new_word
+     
+
+
+# In[220]:
+
+
+my_func3('I am home')
+
+
+# In[194]:
+
+
+b=a.split( )
+
+
+# In[195]:
+
+
+b
+
+
+# In[197]:
+
+
+c=b[::-1]
+
+
+# In[218]:
+
+
+' '.join(c) 
+
+
+# In[222]:
+
+
+def my_func4(n):
+    
+    return (abs(100-n)<=10) and (abs(200-n)<=20)
+
+
+# In[226]:
+
+
+my_func4(104)
+
+
+# In[227]:
+
+
+''''has_33([1, 3, 3]) → True
+has_33([1, 3, 1, 3]) → False
+has_33([3, 1, 3]) → False'''
+
+
+# In[242]:
+
+
+def my_func5(num):
+    for i in range(0,len(num)-1):
+        if num[i]==3 and num[i+1]==3:
+            return True
+        else:
+            return False
+    
+
+
+# In[244]:
+
+
+my_func5([3,0,3])
+
+
+# In[283]:
+
+
+def paper_doll(text):
+    a=[]
+    for i in range(0,len(text)):
+        new_text=text[i]*3
+        print((new_text))
+        
+
+
+# In[284]:
+
+
+paper_doll("hello")
+
+
+# In[287]:
+
+
+def paper_doll(text):
+    new_text=''
+    for i in range(0,len(text)):
+        
+        new_text+=text[i]*3
+    print((new_text))
+
+
+# In[288]:
+
+
+paper_doll("hello")
+
+
+# In[258]:
+
+
+
+''''BLACKJACK: Given three integers between 1 and 11, 
+if their sum is less than or equal to 21, return their sum. 
+If their sum exceeds 21 and there's an eleven, reduce the total
+sum by 10. Finally, 
+if the sum (even after adjustment) exceeds 21, return 'BUST'''
+
+
+# In[341]:
+
+
+def func5(a,b,c):
+    for i in a,b,c:
+        if sum((a,b,c))<21:
+            return sum((a,b,c))
+        elif sum((a,b,c))>21 and 11 in ((a,b,c)):
+            return sum((a,b,c))-10
+        else:
+            return 'Bust'
+            
+           
+
+
+# In[336]:
+
+
+def func5(*args):
+    for num in args:
+
+        if 11 in args:
+                if i ==11:
+                    return sum(args)-10
+        elif sum(args)>21:
+            return 'BUST'
+        else:
+            sum(args)<21
+            return sum(args)
+                
+        
+
+
+# In[344]:
+
+
+func5(7,7,9)
+
+
+# In[317]:
+
+
+def func5(*args):
+
+
+            for i in args:
+                if i ==11:
+                    return sum(args)-10
+                
+
+
+# In[320]:
+
+
+SUMMER OF '69: Return the sum of the numbers 
+in the array, except ignore sections of numbers 
+starting with a 6 and extending to the next 9 
+(every 6 will be followed by at least one 9). Return 0 for no numbers.
+
+
+# In[345]:
+
+
+def summner(num):
+    total = 0
+    add = True 
+    
+    for arr in num:
+        while add:
+            if arr!=6:
+                total+=num
+                break
+            else:
+                add =False
+        while not add:
+            if num !=9:
+                break
+            else:
+                add=True
+                break
+    return total 
+            
+    
+    
+
+
+# In[346]:
+
+
+'''SPY GAME: Write a function that takes in a list 
+of integers and returns True if it contains 007 in order'''
+
+
+# In[366]:
+
+
+def sky_game(num):
+    for i in range(0,len(num)-2):
+        if num[i]==0 and num[i+1]==0 and num[i+2]==7:
+            return True
+        
+        
+
+
+# In[367]:
+
+
+sky_game([1,2,4,0,0,7,5])
+
+
+# In[368]:
+
+
+def sky_game(nums):
+    for x in range(0,len(nums)-2):
+
+        if nums[x] == 0 and nums[x+1] == 0 and nums[x+2]==7:
+            return True
+        else:
+            return True
+    
+    
+
+
+# In[369]:
+
+
+sky_game([1,2,4,0,0,7,5])
+
+
+# In[371]:
+
+
+sky_game([1,7,2,0,4,5,0])
+
+
+# In[375]:
+
+
+def sky_games(num):
+    code=[0,0,7,'X']
+    for i in num:
+        if i==code[0]:
+            code.pop(0)
+            
+    return len(code)==1
+        
+            
+
+
+# In[376]:
+
+
+sky_games([1,7,2,0,4,5,0])
+
+
+# In[402]:
+
+
+def prime_number(num):
+    count=[]
+    for i in range(1,num):
+        c=num%i==0
+        print(i)
+        
+   
+    
+
+
+# In[403]:
+
+
+prime_number(9)
+
+
+# In[12]:
+
+
+num=int(input("enter the number" ))
+
+    for i in range(2,num):
+        if (num%i)==0:
+            print("is not {} a prime number".format(num))
+        break
+    else:
+        print("is {} a prime number".format(num))
+        
+    
+else:
+    print("not prime")
+    
+   
+
+       
+    
+
+        
+        
+
+
+# In[23]:
+
+
+n= int(input("enter the number"))
+if num<2:
+    print("not a prime")
+    
+else:
+    for i in range(2,n):
+        if n%i==0:
+            print("is not {} a prime number".format(n))
+            
+            break
+            
+    else:
+        print("is {} a prime number".format(n))
+    
+    
+
+
+# In[24]:
+
+
+def prime_number  (num):
+    ## number less than 2
+    if num<2:
+        return True
+    
+        for y in range(2,num):
+            if num%y==0:
+                break
+        else:
+            prime.append(x)
+            x+=2
+            
+    print(prime)
+    return len(prime)
+    
+
+
+# In[25]:
+
+
+##map function 
+
+def square(n):
+    return n**2
+list_num=[1,2,3,4,5]
+
+
+# In[26]:
+
+
+list(map(square,list_num))
+
+
+# In[30]:
+
+
+def my_func(word):
+    if len(word)%2==0:
+        return "Even"
+    else:
+        return word[0]
+
+string=['ans','bottle']
+
+
+# In[31]:
+
+
+list(map(my_func,string))
+
+
+# In[32]:
+
+
+##filter 
+
+
+# In[36]:
+
+
+def my_func(num):
+    return num%2==0
+num=[1,2,3,4,5,6,7,8]
+
+
+# In[37]:
+
+
+list(filter(my_func,num))
+
+
+# In[38]:
+
+
+lambda n: n**2
+list_num=[1,2,3,4,5]
+
+
+# In[45]:
+
+
+list(map(lambda n: n**2,list_num))
+
+
+# In[46]:
+
+
+lambda word : len(word)%2==0
+num=[1,2,3,4,5,6,7,8]
+
+
+# In[48]:
+
+
+list(filter(lambda word : word%2==0,num))
+
+
+# In[52]:
+
+
+x=30
+
+def my_fun():
+    x=100
+    return x
+    
+
+
+# In[53]:
+
+
+print(x)
+
+
+# In[78]:
+
+
+name='name is anshul'
+def my_func():
+    ##name='hello'
+    def my_func1():
+        ##name='kanchan'
+        print("my"+' '+ name)
+    my_func1()
+my_func()
+
+
+# In[71]:
+
+
+my_func()
+
+
+# In[103]:
+
+
+x= 50
+
+def func1(x):
+    print(x)
+    
+    x=200
+    
+    print(x)
+    return x
+
+
+# In[106]:
+
+
+x=func1(x)
+
+
+# In[107]:
+
+
+print(x)
+
+
+# Write a function that computes the volume of a sphere given its radius.
+# 
+
+# In[122]:
+
+
+def rad(r):
+    
+    s=(4*3.14*r**2)/3
+    print (s)
+
+
+# In[124]:
+
+
+rad(2)
+
+
+# In[155]:
+
+
+def ran_check(num,low,high):
+    high=max(num,low,high)
+    low=min(num,low,high)
+    b=num
+    print("{} is bwt {} and {}".format(b,high,low))
+
+
+# In[156]:
+
+
+ran_check(5,2,7)
+
+
+# In[151]:
+
+
+high=max('a','b','c')
+low=min(a,b,c)
+
+
+# In[148]:
+
+
+high
+
+
+# In[149]:
+
+
+low
+
+
+# Write a Python function that accepts a string and calculates the number of upper case letters and lower case letters.
+# Sample String : 'Hello Mr. Rogers, how are you this fine Tuesday?'
+# Expected Output : 
+# No. of Upper case characters : 4
+# No. of Lower case Characters : 33
+# 
+# HINT: Two string methods that might prove useful: .isupper() and .islower()
+# If you feel ambitious, explore the Collections module to solve this problem!
+
+# In[157]:
+
+
+def calcualates():
+    
+
+
+# In[161]:
+
+
+def unique( num ):
+    a = set(num)
+    return list(a)
+    
+     
+
+
+# In[163]:
+
+
+unique([1,1,1,1,2,2,3,3,3,3,4,5])
+
+
+# Write a Python function to multiply all the numbers in a list.
+
+# In[222]:
+
+
+def multiple(num):
+    total=1
+    for i in num:
+        total*=i
+    return total
+
+      
+
+
+# In[223]:
+
+
+multiple([1,2,3,-4])
+
+
+# In[251]:
+
+
+def my_func(word):
+    word=word.replace(' ','')
+    return word[::-1]==word
+
+
+# In[252]:
+
+
+my_func('nurses run')
+
+
+# In[250]:
+
+
+s ='anshul is ab l'
+s.replace(' ','')
+
+
+# In[264]:
+
+
+def up_low(s):
+    d={"upper":0, "lower":0}
+    for c in s:
+        if c.isupper():
+            d["upper"]+=1
+        elif c.islower():
+            d["lower"]+=1
+        else:
+            pass
+    print("Original String : ", s)
+    print("No. of Upper case characters : ", d["upper"])
+    print("No. of Lower case Characters : ", d["lower"])
+
+         
+    
+
+
+# In[265]:
+
+
+
+s = 'Hello Mr. Rogers, how are you this fine Tuesday?'
+up_low(s)
+
+
+# Hard:
+# Write a Python function to check whether a string is pangram or not.
+# Note : Pangrams are words or sentences containing every letter of the alphabet at least once.
+# For example : "The quick brown fox jumps over the lazy dog"
+# 
+# Hint: Look at the string module
+
+# In[274]:
+
+
+import string
+def pangram(str1,alphabet=string.ascii_lowercase):
+    alphaset=set(alphabet)
+    return alphaset<=set(str1)
+
+
+# In[276]:
+
+
+pangram("The quick brown fox jumps over the lazy dog")
+
+
+# In[ ]:
+
+
+
+
