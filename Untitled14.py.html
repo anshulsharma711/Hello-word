@@ -1,0 +1,198 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# oops 
+>how class is used user define object 
+>class blue print of object
+>instance is a specific object create in a particular class
+>def_int_=>specical methods when we create instance of class (constructor),auto create instance of class
+>def _int_(sef,.....)=>self -> instance of object , used to connect method to instance ,refrence instance of class 
+attribute =>characterics of object 
+list.....=>some of them attribute or some of them methods 
+my_dog=Dog(.....)=>my_dog instance of class
+# In[12]:
+
+
+class Dog():
+    
+    def __init__(self,breed):
+        
+        self.breed=breed
+        
+
+
+# In[15]:
+
+
+my_dog=Dog(breed='lab')
+
+
+# In[16]:
+
+
+my_dog.breed
+
+class object->same for any instance of class so we dont define sef keyword 
+
+class  
+   class object 
+    then user definite  atribute 
+# methods 
+Differnce of attribute / method ==>() way of call 
+def bark(sef):
+    print()
+method for class =>operation /ACTION 
+U can class of object 
+class.pi or self.pi
+# In[18]:
+
+
+class Circle():
+    pi=3.14
+    
+    def __init__(self,raduis=1):
+        self.raduis=raduis
+        
+    def circumferce(self):
+        return self.raduis*self.pi*2
+        
+
+
+# In[23]:
+
+
+my_circle=Circle(20)
+
+
+# In[24]:
+
+
+my_circle.raduis
+
+
+# In[25]:
+
+
+my_circle.pi
+
+
+# In[26]:
+
+
+my_circle.circumferce()
+
+
+# inheritance 
+>reduce complex of code 
+>we can re-use anything from main class
+>in new class you re-use them ,create method in new class , overwrite every thing 
+# In[44]:
+
+
+class Animal():
+    
+    def __int__(self):
+        print("animal created")
+    
+    def who_i_am(self):
+        print("i m an animal")
+        
+    def eat(self):
+        print("i m eating ")
+
+
+# In[45]:
+
+
+class Dog(Animal):
+    
+    def __int__(self):
+        Animal.__init__(self)
+        print("fhgf")
+    
+    def brak(self):
+        print("wooh")
+
+
+# In[46]:
+
+
+my_dog=Dog()
+
+
+# In[40]:
+
+
+my_dog.eat()
+
+
+# In[42]:
+
+
+my_dog.brak()
+
+
+# magic funcation 
+
+# In[90]:
+
+
+class book():
+    
+    def __init__(self,title,page,author):
+        self.title=title
+        self.page=page
+        self.author=author
+    
+    def __str__(self):
+        return f"{self.title} is written by {self.author}"
+    
+    def __len__(self):
+        return self.page
+    
+    def __del__(self):
+        return "ritam delete everything"
+        
+
+
+# In[91]:
+
+
+b=book(title='sex',page=200,author='ritam')
+
+
+# In[92]:
+
+
+b.title
+
+
+# In[93]:
+
+
+print(b)
+
+
+# In[94]:
+
+
+len(b)
+
+
+# In[95]:
+
+
+del b
+
+
+# In[96]:
+
+
+b
+
+
+# In[ ]:
+
+
+
+
