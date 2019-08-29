@@ -1,0 +1,125 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# expection handling
+
+# In[2]:
+
+
+try:
+    
+    result =10+'10'
+    
+except:
+    print("this  is not correct ")
+else:
+    print(result)
+    print("anshul ")
+
+
+# In[5]:
+
+
+try:
+    f = open("textfile",'r')
+    f.write("writ a text file")
+except:
+    print("all other are expection")
+finally:
+    print("anshul ")
+
+
+# In[6]:
+
+
+def as_for_number():
+    try:
+        result=int(input("enter the number: "))
+    except:
+        print("its not a number")
+    finally:
+        print("anshul")
+        
+
+
+# In[8]:
+
+
+as_for_number()
+
+
+# In[12]:
+
+
+def as_for_number():
+    while True:
+        try:
+            result=int(input("enter the number: "))
+        except:
+            print("its not a number")
+            continue 
+        else:
+            print("enter the write answer")
+        break
+            
+    
+        
+
+
+# In[13]:
+
+
+as_for_number()
+
+
+# In[15]:
+
+
+try:
+    for i in ['a','b','c']:
+        print(i**2)
+except:
+    print("this is a  type error")
+
+
+# In[19]:
+
+
+try:
+    x=0
+    y=0
+    z=x/y
+except:
+    print("this is an error")
+finally:
+    print("this  is ")
+
+
+# In[22]:
+
+
+def ask():
+    waiting =True
+    while waiting:
+        try:
+            a=int(input("enter the number "))
+        except:
+            print("enter INT")
+            continue
+        else:
+            waiting=False
+    print("number printed")
+    print(a**2)
+
+
+# In[23]:
+
+
+ask()
+
+
+# In[ ]:
+
+
+
+
