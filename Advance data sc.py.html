@@ -1,0 +1,1003 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# colllection
+
+# In[2]:
+
+
+from collections import Counter
+
+
+# In[3]:
+
+
+l=[1,1,1,1,1,2,2,2,5,5,6,7,7]
+
+
+# In[5]:
+
+
+Counter(l)
+
+
+# In[6]:
+
+
+S='ssssstttttbbbbbqqqqqiiiillllssss'
+
+
+# In[7]:
+
+
+Counter(S)
+
+
+# In[8]:
+
+
+M='my name is anshul sharma and my mothere name is kanchan shamra and fathe name is sk sharma '
+
+
+# In[10]:
+
+
+o=M.split()
+
+
+# In[22]:
+
+
+Counter(o)
+
+
+# In[16]:
+
+
+c.most_common(3)
+
+
+# In[18]:
+
+
+sum(c.values())
+
+
+# In[19]:
+
+
+list(c)
+
+
+# In[20]:
+
+
+set(c)
+
+
+# In[21]:
+
+
+dict(c)
+
+
+# In[24]:
+
+
+c.items()
+
+
+# In[27]:
+
+
+c+=Counter()
+
+
+# In[29]:
+
+
+c
+
+
+# In[30]:
+
+
+d={'k1':1}
+
+
+# In[32]:
+
+
+d['k1']
+
+
+# In[33]:
+
+
+d['k2']
+
+
+# In[34]:
+
+
+from collections import defaultdict
+
+
+# In[35]:
+
+
+d=defaultdict(object)
+
+
+# In[37]:
+
+
+d['one']
+
+
+# In[38]:
+
+
+d
+
+
+# In[39]:
+
+
+for i in d:
+    print(i)
+
+
+# In[40]:
+
+
+d=defaultdict(lambda:0)
+
+
+# In[41]:
+
+
+d['one']
+
+
+# In[42]:
+
+
+d['two']=2
+
+
+# In[43]:
+
+
+d
+
+
+# In[44]:
+
+
+d['three']
+
+
+# In[45]:
+
+
+d
+
+
+# In[48]:
+
+
+d={}
+d['a']=1
+d['b']=2
+d['c']=3
+d['d']=4
+d['e']=5
+
+
+# In[49]:
+
+
+d
+
+
+# In[63]:
+
+
+for key,value in d.items():
+    print(value,key)
+
+
+# In[68]:
+
+
+from collections import OrderedDict
+
+
+# In[72]:
+
+
+d=OrderedDict()
+
+
+# In[73]:
+
+
+d['a']=1
+d['b']=2
+d['c']=3
+d['d']=4
+d['e']=5
+
+
+# In[74]:
+
+
+d
+
+
+# In[75]:
+
+
+for key,value in d.items():
+    print(value,key)
+
+
+# Date time 
+
+# In[77]:
+
+
+import datetime
+
+
+# In[78]:
+
+
+t=datetime.time(5,25,1)
+
+
+# In[80]:
+
+
+print(t)
+
+
+# In[86]:
+
+
+t.microsecond
+
+
+# In[90]:
+
+
+print (datetime.time.max)
+
+
+# In[91]:
+
+
+print (datetime.time.min)
+
+
+# In[98]:
+
+
+t=datetime.date.today()
+
+
+# In[101]:
+
+
+t.today()
+
+
+# In[102]:
+
+
+t.month
+
+
+# In[108]:
+
+
+print(datetime.date.max)
+
+
+# In[110]:
+
+
+tody=datetime.date(2018,7,4)
+
+
+# In[113]:
+
+
+d2=tody.replace(year=1999)
+
+
+# In[114]:
+
+
+d2
+
+
+# In[115]:
+
+
+tody-d2
+
+
+# In[116]:
+
+
+t=datetime.time(8,44,8)
+
+
+# In[117]:
+
+
+t
+
+
+# In[121]:
+
+
+t.replace(hour=9)
+
+
+# string io 
+
+# In[123]:
+
+
+import io
+
+
+# In[124]:
+
+
+
+# Arbitrary String
+message = 'This is just a normal string.'
+
+
+# In[125]:
+
+
+f = io.StringIO(message)
+
+
+# In[126]:
+
+
+f.read()
+
+
+# In[127]:
+
+
+f.write(' Second line written to file like object')
+
+
+# In[132]:
+
+
+f.seek(0)
+
+
+# In[133]:
+
+
+f.read()
+
+
+# In[134]:
+
+
+f.close()
+
+
+# In[135]:
+
+
+f
+
+
+# Advance number
+
+# In[136]:
+
+
+bin(123)
+
+
+# In[137]:
+
+
+bin(128)
+
+
+# In[138]:
+
+
+pow(5,5)
+
+
+# In[139]:
+
+
+abs(-3.98)
+
+
+# In[141]:
+
+
+round(-7.976757465,1)
+
+
+# Advance string
+
+# In[142]:
+
+
+s = 'hello world'
+
+
+# In[143]:
+
+
+s.capitalize()
+
+
+# In[145]:
+
+
+s.upper()
+
+
+# In[148]:
+
+
+s.count('o')
+
+
+# In[149]:
+
+
+s.find('o')
+
+
+# In[150]:
+
+
+print("hello\tanshul")
+
+
+# In[151]:
+
+
+s
+
+
+# In[152]:
+
+
+s.isalnum()
+
+
+# In[153]:
+
+
+s.isalpha()
+
+
+# In[158]:
+
+
+s='Hello'
+
+
+# In[159]:
+
+
+s
+
+
+# In[160]:
+
+
+s.isalnum()
+
+
+# In[161]:
+
+
+s.islower()
+
+
+# In[162]:
+
+
+s.isspace()
+
+
+# In[167]:
+
+
+m=' '
+
+
+# In[168]:
+
+
+m.isspace()
+
+
+# In[169]:
+
+
+'HELLO'.isupper()
+
+
+# In[170]:
+
+
+s='hello'
+
+
+# In[176]:
+
+
+s[-1]=='o'
+
+
+# In[178]:
+
+
+s.split('e')
+
+
+# In[180]:
+
+
+s='hihihiiiihiiihhhhh'
+
+
+# In[181]:
+
+
+s.split("i")
+
+
+# In[182]:
+
+
+s.partition('i')
+
+
+# Advance set
+
+# In[184]:
+
+
+s=set()
+
+
+# In[185]:
+
+
+s.add(1)
+
+
+# In[187]:
+
+
+s.add(2)
+
+
+# In[189]:
+
+
+s.add(3)
+
+
+# In[190]:
+
+
+s
+
+
+# In[191]:
+
+
+s.clear()
+
+
+# In[192]:
+
+
+s
+
+
+# In[193]:
+
+
+s={1,2,3}
+
+
+# In[197]:
+
+
+sc=s.copy()
+
+
+# In[199]:
+
+
+sc.add(4)
+
+
+# In[200]:
+
+
+sc
+
+
+# In[201]:
+
+
+sc-s
+
+
+# In[203]:
+
+
+s1={3,5,7}
+s2={3,6,9}
+
+
+# In[204]:
+
+
+s1.difference_update(s2)
+
+
+# In[205]:
+
+
+s1
+
+
+# In[206]:
+
+
+s2
+
+
+# In[207]:
+
+
+s1
+
+
+# In[208]:
+
+
+s={3,6,8,13}
+
+
+# In[209]:
+
+
+s.discard(3)
+
+
+# In[210]:
+
+
+s
+
+
+# In[211]:
+
+
+s1
+
+
+# In[212]:
+
+
+s2
+
+
+# In[213]:
+
+
+s1={1,2,3}
+s2={2,3}
+
+
+# In[214]:
+
+
+s1.intersection(s2)
+
+
+# In[215]:
+
+
+s1={1,2,3}
+s2={1,4,6}
+s3={9,6}
+
+
+# In[216]:
+
+
+s1.isdisjoint(s2)
+
+
+# In[217]:
+
+
+s1.isdisjoint(s3)
+
+
+# In[218]:
+
+
+s1={1,2}
+s2={1,2,3.4}
+
+
+# In[220]:
+
+
+s1.issubset(s2)
+
+
+# 
+
+# In[221]:
+
+
+s2.issubset(s1)
+
+
+# In[222]:
+
+
+s2.issuperset(s2)
+
+
+# In[223]:
+
+
+s1={1,2,3}
+s2={8,9,77}
+
+
+# In[225]:
+
+
+s1.union(s2)
+
+
+# In[227]:
+
+
+s1.update(s2)
+
+
+# In[229]:
+
+
+s1
+
+
+# Advance dic
+
+# In[233]:
+
+
+{x:x**2 for x in range(10)}
+
+
+# In[234]:
+
+
+d = {'k1':1,'k2':2}
+
+
+# In[237]:
+
+
+for key in d.keys():
+    print(key)
+
+
+# In[238]:
+
+
+for key, value in d.items():
+    print(key,value)
+
+
+# In[239]:
+
+
+d={'k1':2,'k2':4}
+
+
+# In[242]:
+
+
+{k:v**2 for k,v in zip(['a','d'],range(2))}
+
+
+# In[244]:
+
+
+d.values()
+
+
+# list
+
+# In[245]:
+
+
+l=[1,2,3,4]
+
+
+# In[246]:
+
+
+l.append(5)
+
+
+# In[247]:
+
+
+l
+
+
+# In[250]:
+
+
+l.count(5)
+
+
+# In[251]:
+
+
+l1=[4,5,6]
+
+
+# In[252]:
+
+
+l.append(l1)
+
+
+# In[253]:
+
+
+l
+
+
+# In[255]:
+
+
+l1=[1,2,3]
+l2=[4,5,6]
+
+
+# In[256]:
+
+
+l1.extend(l2)
+
+
+# In[257]:
+
+
+l1
+
+
+# In[258]:
+
+
+l1.index(3)
+
+
+# In[259]:
+
+
+l1
+
+
+# In[260]:
+
+
+l1.insert(2,'anshuk')
+
+
+# In[261]:
+
+
+l1
+
+
+# In[262]:
+
+
+l1.pop()
+
+
+# In[263]:
+
+
+l1
+
+
+# In[264]:
+
+
+l1.pop(0)
+
+
+# In[265]:
+
+
+l1
+
+
+# In[266]:
+
+
+l1.remove("anshuk")
+
+
+# In[268]:
+
+
+l1.pop()
+
+
+# In[269]:
+
+
+l1
+
+
+# In[272]:
+
+
+l1.reverse()
+
+
+# In[273]:
+
+
+l1
+
+
+# In[277]:
+
+
+l1.sort()
+
+
+# In[278]:
+
+
+l1
+
+
+# In[ ]:
+
+
+
+
