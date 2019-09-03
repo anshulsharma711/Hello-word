@@ -1,0 +1,70 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[27]:
+
+
+from scipy import stats
+n=25
+p=0.073
+a=range(0,26)
+b=stats.binom.pmf(a,n,p)
+b
+
+
+# In[7]:
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+# In[14]:
+
+
+plt.bar(a, b, align='center', alpha=0.5)
+plt.xticks(a)
+plt.ylabel('probility')
+plt.title('Programming language usage')
+
+plt.show()
+
+
+# In[20]:
+
+
+norm_cdf =stats.norm.cdf(b)
+
+
+# In[23]:
+
+
+b=stats.binom.pmf(0,n,p)
+
+
+# In[24]:
+
+
+b
+
+
+# In[39]:
+
+
+f=range(0,25)
+
+b=list(stats.binom.cdf(f,n,p))
+
+
+# In[42]:
+
+
+b[6]
+
+
+# In[ ]:
+
+
+
+
