@@ -1,0 +1,39 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[29]:
+
+
+
+from scipy.stats import binom
+n=250
+p=0.08333
+a=range(0,250)
+data_binom = binom.pmf(a,n,p)
+data_binom 
+
+
+# In[31]:
+
+
+
+import matplotlib.pyplot as plt
+
+plt.plot(a,data_binom,'o-')
+plt.show()
+
+
+# In[32]:
+
+
+plt.bar(a, data_binom, align='center', alpha=0.5)
+plt.xticks(a)
+plt.ylabel('probility')
+plt.title('Programming language usage')
+
+
+# In[ ]:
+
+
+
+
